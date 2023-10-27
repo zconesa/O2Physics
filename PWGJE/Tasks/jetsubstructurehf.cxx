@@ -184,37 +184,37 @@ WorkflowSpec defineDataProcessing(ConfigContext const& cfgc)
                                                           SetDefaultProcesses{},
                                                           TaskName{"jet-substructure-D0-data"}));
 
-    tasks.emplace_back(adaptAnalysisTask<MCDetectorLevelJetSubstructureD0>(cfgc,
+  tasks.emplace_back(adaptAnalysisTask<MCDetectorLevelJetSubstructureD0>(cfgc,
+                                                                         SetDefaultProcesses{},
+                                                                         TaskName{"jet-substructure-D0-mcd"}));
+
+  tasks.emplace_back(adaptAnalysisTask<MCParticleLevelJetSubstructureD0>(cfgc,
+                                                                         SetDefaultProcesses{},
+                                                                         TaskName{"jet-substructure-D0-mcp"}));
+  /*
+  tasks.emplace_back(adaptAnalysisTask<JetSubstructureLc>(cfgc,
+                                                          SetDefaultProcesses{},
+                                                          TaskName{"jet-substructure-Lc-data"}));
+
+    tasks.emplace_back(adaptAnalysisTask<MCDetectorLevelJetSubstructureLc>(cfgc,
                                                                            SetDefaultProcesses{},
-                                                                           TaskName{"jet-substructure-D0-mcd"}));
+                                                                           TaskName{"jet-substructure-Lc-mcd"}));
 
-    tasks.emplace_back(adaptAnalysisTask<MCParticleLevelJetSubstructureD0>(cfgc,
+    tasks.emplace_back(adaptAnalysisTask<MCParticleLevelJetSubstructureLc>(cfgc,
                                                                            SetDefaultProcesses{},
-                                                                           TaskName{"jet-substructure-D0-mcp"}));
-    /*
-    tasks.emplace_back(adaptAnalysisTask<JetSubstructureLc>(cfgc,
-                                                            SetDefaultProcesses{},
-                                                            TaskName{"jet-substructure-Lc-data"}));
+                                                                           TaskName{"jet-substructure-Lc-mcp"}));
 
-      tasks.emplace_back(adaptAnalysisTask<MCDetectorLevelJetSubstructureLc>(cfgc,
-                                                                             SetDefaultProcesses{},
-                                                                             TaskName{"jet-substructure-Lc-mcd"}));
+    tasks.emplace_back(adaptAnalysisTask<JetSubstructureBplus>(cfgc,
+                                                               SetDefaultProcesses{},
+                                                               TaskName{"jet-substructure-Bplus-data"}));
 
-      tasks.emplace_back(adaptAnalysisTask<MCParticleLevelJetSubstructureLc>(cfgc,
-                                                                             SetDefaultProcesses{},
-                                                                             TaskName{"jet-substructure-Lc-mcp"}));
+    tasks.emplace_back(adaptAnalysisTask<MCDetectorLevelJetSubstructureBplus>(cfgc,
+                                                                              SetDefaultProcesses{},
+                                                                              TaskName{"jet-substructure-Bplus-mcd"}));
 
-      tasks.emplace_back(adaptAnalysisTask<JetSubstructureBplus>(cfgc,
-                                                                 SetDefaultProcesses{},
-                                                                 TaskName{"jet-substructure-Bplus-data"}));
-
-      tasks.emplace_back(adaptAnalysisTask<MCDetectorLevelJetSubstructureBplus>(cfgc,
-                                                                                SetDefaultProcesses{},
-                                                                                TaskName{"jet-substructure-Bplus-mcd"}));
-
-      tasks.emplace_back(adaptAnalysisTask<MCParticleLevelJetSubstructureBplus>(cfgc,
-                                                                                SetDefaultProcesses{},
-                                                                                TaskName{"jet-substructure-Bplus-mcp"}));
-    */
-    return WorkflowSpec{tasks};
+    tasks.emplace_back(adaptAnalysisTask<MCParticleLevelJetSubstructureBplus>(cfgc,
+                                                                              SetDefaultProcesses{},
+                                                                              TaskName{"jet-substructure-Bplus-mcp"}));
+  */
+  return WorkflowSpec{tasks};
 }

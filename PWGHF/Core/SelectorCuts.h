@@ -15,8 +15,8 @@
 #ifndef PWGHF_CORE_SELECTORCUTS_H_
 #define PWGHF_CORE_SELECTORCUTS_H_
 
-#include <string>    // std::string
-#include <vector>    // std::vector
+#include <string> // std::string
+#include <vector> // std::vector
 
 namespace o2::analysis
 {

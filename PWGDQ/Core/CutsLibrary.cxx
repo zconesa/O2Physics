@@ -799,8 +799,8 @@ AnalysisCompositeCut* o2::aod::dqcuts::GetCompositeCut(const char* cutName)
   }
 
   std::vector<TString> vecPIDcase;
-  vecPIDcase.emplace_back("");      // without post calibration
-  vecPIDcase.emplace_back("_Corr"); // case of using post calibrated PID spectra
+  vecPIDcase.emplace_back("");              // without post calibration
+  vecPIDcase.emplace_back("_Corr");         // case of using post calibrated PID spectra
   vecPIDcase.emplace_back("_CorrWithKaon"); // case of using post calibrated PID spectra with also the kaons
 
   // loop to define PID cuts with and without post calibration
@@ -2549,8 +2549,8 @@ AnalysisCut* o2::aod::dqcuts::GetAnalysisCut(const char* cutName)
   }
 
   std::vector<TString> vecPIDcase;
-  vecPIDcase.emplace_back("");      // without post calibration
-  vecPIDcase.emplace_back("_Corr"); // case of using post calibrated PID spectra
+  vecPIDcase.emplace_back("");              // without post calibration
+  vecPIDcase.emplace_back("_Corr");         // case of using post calibrated PID spectra
   vecPIDcase.emplace_back("_CorrWithKaon"); // case of using post calibrated PID spectra with also the kaons
 
   // loop to define TPC PID cuts with and without post calibration
